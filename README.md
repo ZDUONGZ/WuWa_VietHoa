@@ -38,13 +38,6 @@ d:\Dự án Việt Hóa WuWa/
 
 ---
 
-## 🚀 Cách mở và biên dịch ứng dụng
-
-1. Mở **Android Studio** (bản Iguana / Jellyfish / Ladybug).
-2. Chọn **Open** và dẫn tới thư mục `d:\Dự án Việt Hóa WuWa`.
-3. Chờ Gradle đồng bộ các thư viện (Shizuku API, Compose BOM).
-4. Bấm **Run 'app'** (hoặc tổ hợp phím `Shift + F10`) để cài đặt lên điện thoại Android.
-
 ## 📱 Cách sử dụng trên điện thoại
 
 1. Mở app **Shizuku** trên điện thoại và khởi chạy (qua Ghép nối Wifi / USB Debugging).
