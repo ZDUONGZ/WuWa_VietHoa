@@ -13,3 +13,4 @@ local.properties
 extracted/
 *.exe
 node_modules/
+release_files/
