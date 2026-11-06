@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <title>WuWa Việt Hóa Mobile - Trang Chủ Việt Hóa</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <style>
+          body {
+            margin: 0;
+            font-family:
+              "Plus Jakarta Sans",
+              system-ui,
+              -apple-system,
+              sans-serif;
+            background-color: #080a0f;
+            color: #f1f5f9;
+            -webkit-font-smoothing: antialiased;
+          }
+          * {
+            box-sizing: border-box;
+          }
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+
+          /* Claude Motion Animations */
+          @keyframes pulseGlow {
+            0%,
+            100% {
+              box-shadow:
+                0 0 15px rgba(0, 245, 212, 0.35),
+                inset 0 0 15px rgba(0, 245, 212, 0.15);
+            }
+            50% {
+              box-shadow:
+                0 0 28px rgba(0, 245, 212, 0.7),
+                inset 0 0 25px rgba(0, 245, 212, 0.4);
+            }
+          }
+
+          @keyframes sunbeam {
+            0%,
+            100% {
+              opacity: 0.22;
+              transform: rotate(26deg) translateY(-8px);
+            }
+            50% {
+              opacity: 0.52;
+              transform: rotate(28deg) translateY(4px);
+            }
+          }
+
+          @keyframes particleFloat1 {
+            0% {
+              transform: translateY(0px) translateX(0px);
+              opacity: 0;
+            }
+            20% {
+              opacity: 0.8;
+            }
+            80% {
+              opacity: 0.7;
+            }
+            100% {
+              transform: translateY(-380px) translateX(25px);
+              opacity: 0;
+            }
+          }
+
+          @keyframes particleFloat2 {
+            0% {
+              transform: translateY(0px) translateX(0px);
+              opacity: 0;
+            }
+            25% {
+              opacity: 0.9;
+            }
+            75% {
+              opacity: 0.6;
+            }
+            100% {
+              transform: translateY(-420px) translateX(-20px);
+              opacity: 0;
+            }
+          }
+
+          @keyframes soundWave {
+            0%,
+            100% {
+              height: 4px;
+            }
+            50% {
+              height: 16px;
+            }
+          }
+
+          @keyframes buttonShimmer {
+            0% {
+              background-position: -200% 0;
+            }
+            100% {
+              background-position: 200% 0;
+            }
+          }
+
+          .glow-interactive {
+            animation: pulseGlow 3s infinite ease-in-out;
+          }
+
+          .shimmer-btn {
+            background: linear-gradient(
+              90deg,
+              #00f5d4 0%,
+              #70fff1 25%,
+              #00f5d4 50%,
+              #05d5b2 75%,
+              #00f5d4 100%
+            );
+            background-size: 200% auto;
+            animation: buttonShimmer 4s linear infinite;
+          }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </helmet>
+
+      <div
+        style="
+          width: 390px;
+          height: 844px;
+          background: #0b0d13;
+          color: #ffffff;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          overflow: hidden;
+          border-radius: 40px;
+          box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85);
+          border: 4px solid #1e2333;
+        "
+      >
+        <!-- Full Bleed Character Background Layer -->
+        <div
+          style="
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+            pointer-events: none;
+          "
+        >
+          <img
+            src="/_blob/338ceecb86f03eb9fed9f7b05c180994"
+            alt="Character Background"
+            style="
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: 55% 10%;
+            "
+          />
+
+          <!-- Sunlight Beam Animation -->
+          <div
+            style="
+              position: absolute;
+              top: -100px;
+              left: -40px;
+              width: 280px;
+              height: 750px;
+              background: linear-gradient(
+                90deg,
+                rgba(255, 235, 175, 0) 0%,
+                rgba(255, 235, 175, 0.2) 50%,
+                rgba(255, 235, 175, 0) 100%
+              );
+              filter: blur(28px);
+              animation: sunbeam 6s infinite ease-in-out;
+            "
+          ></div>
+
+          <!-- Floating Cyan & Gold Ambient Dust Particles (Motion) -->
+          <div
+            style="
+              position: absolute;
+              bottom: 120px;
+              left: 80px;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: #00f5d4;
+              filter: blur(1px);
+              box-shadow: 0 0 8px #00f5d4;
+              animation: particleFloat1 7s infinite ease-out;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              bottom: 80px;
+              left: 220px;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: #ffd166;
+              filter: blur(1px);
+              box-shadow: 0 0 8px #ffd166;
+              animation: particleFloat2 8.5s infinite ease-out 2s;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              bottom: 160px;
+              left: 160px;
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background: #00f5d4;
+              filter: blur(1px);
+              box-shadow: 0 0 6px #00f5d4;
+              animation: particleFloat1 9s infinite ease-out 4s;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              bottom: 200px;
+              left: 300px;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: #00f5d4;
+              filter: blur(1px);
+              box-shadow: 0 0 6px #00f5d4;
+              animation: particleFloat2 6.5s infinite ease-out 1s;
+            "
+          ></div>
+
+          <!-- Cinematic Vignette & Bottom Readability Scrim -->
+          <div
+            style="
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(
+                180deg,
+                rgba(11, 13, 19, 0.7) 0%,
+                rgba(11, 13, 19, 0.15) 30%,
+                rgba(11, 13, 19, 0.45) 55%,
+                rgba(11, 13, 19, 0.92) 80%,
+                #0b0d13 100%
+              );
+            "
+          ></div>
+        </div>
+
+        <!-- Phone Status Bar Mockup -->
+        <div
+          style="
+            height: 44px;
+            width: 100%;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 20;
+            background: linear-gradient(
+              180deg,
+              rgba(11, 13, 19, 0.85) 0%,
+              rgba(11, 13, 19, 0) 100%
+            );
+          "
+        >
+          <span
+            style="
+              font-size: 13px;
+              font-weight: 700;
+              letter-spacing: -0.2px;
+              color: #ffffff;
+            "
+            >19:35</span
+          >
+          <div style="display: flex; align-items: center; gap: 6px">
+            <svg
+              width="15"
+              height="12"
+              viewBox="0 0 16 12"
+              fill="#FFFFFF"
+              aria-hidden="true"
+            >
+              <path
+                d="M0 10.5C0 9.67 0.67 9 1.5 9H2.5C3.33 9 4 9.67 4 10.5V11.5C4 11.78 3.78 12 3.5 12H0.5C0.22 12 0 11.78 0 11.5V10.5ZM4 7.5C4 6.67 4.67 6 5.5 6H6.5C7.33 6 8 6.67 8 7.5V11.5C8 11.78 7.78 12 7.5 12H4.5C4.22 12 4 11.78 4 11.5V7.5ZM8 4.5C8 3.67 8.67 3 9.5 3H10.5C11.33 3 12 3.67 12 4.5V11.5C12 11.78 11.78 12 11.5 12H8.5C8.22 12 8 11.78 8 11.5V4.5ZM12 1.5C12 0.67 12.67 0 13.5 0H14.5C15.33 0 16 0.67 16 1.5V11.5C16 11.78 15.78 12 15.5 12H12.5C12.22 12 12 11.78 12 11.5V1.5Z"
+              />
+            </svg>
+            <svg
+              width="15"
+              height="12"
+              viewBox="0 0 16 12"
+              fill="#FFFFFF"
+              aria-hidden="true"
+            >
+              <path
+                d="M8 2.5C11 2.5 13.6 3.7 15.5 5.6C15.8 5.9 15.8 6.4 15.5 6.7L8.4 13.8C8.2 14 7.8 14 7.6 13.8L0.5 6.7C0.2 6.4 0.2 5.9 0.5 5.6C2.4 3.7 5 2.5 8 2.5Z"
+              />
+            </svg>
+            <div
+              style="
+                width: 22px;
+                height: 11px;
+                border: 1.5px solid #ffffff;
+                border-radius: 3px;
+                padding: 1px;
+                display: flex;
+                align-items: center;
+              "
+            >
+              <div
+                style="
+                  width: 15px;
+                  height: 7px;
+                  background: #00f5d4;
+                  border-radius: 1.5px;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Header HUD Layer -->
+        <div
+          style="
+            padding: 6px 16px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 20;
+          "
+        >
+          <div style="display: flex; align-items: center; gap: 10px">
+            <div
+              style="
+                width: 42px;
+                height: 42px;
+                border-radius: 11px;
+                overflow: hidden;
+                border: 1.5px solid rgba(255, 255, 255, 0.25);
+                box-shadow: 0 4px 14px rgba(239, 68, 68, 0.45);
+                flex-shrink: 0;
+              "
+            >
+              <img
+                src="/_blob/3d7150fcceab2d8dc00bf1b14fee984c"
+                alt="WuWa Việt Hóa"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 6px">
+                <span
+                  style="
+                    font-size: 9px;
+                    font-weight: 800;
+                    background: #ffc107;
+                    color: #000;
+                    padding: 1px 6px;
+                    border-radius: 4px;
+                    text-transform: uppercase;
+                  "
+                  >v3.7.x</span
+                >
+                <span
+                  style="
+                    font-size: 11px;
+                    color: #e2e8f0;
+                    font-weight: 700;
+                    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+                  "
+                  >SHIZUKU ACTIVE</span
+                >
+              </div>
+              <h1
+                style="
+                  margin: 2px 0 0;
+                  font-size: 18px;
+                  font-weight: 800;
+                  color: #ffffff;
+                  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+                  letter-spacing: -0.3px;
+                "
+              >
+                WuWa Việt Hóa
+              </h1>
+            </div>
+          </div>
+
+          <!-- Motion & Display Toggle Button -->
+          <button
+            type="button"
+            onClick="{{ toggleDisplayMode }}"
+            style="
+              background: rgba(20, 24, 35, 0.75);
+              backdrop-filter: blur(12px);
+              border: 1px solid rgba(0, 245, 212, 0.4);
+              padding: 6px 12px;
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              cursor: pointer;
+              color: #00f5d4;
+              font-size: 11px;
+              font-weight: 700;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            "
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+            <span>{{ modeButtonText }}</span>
+          </button>
+        </div>
+
+        <!-- Audio Wave Mascot Indicator (Motion Decor) -->
+        <div
+          style="
+            padding: 0 16px;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <div
+            style="
+              background: rgba(14, 18, 28, 0.65);
+              backdrop-filter: blur(10px);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              border-radius: 20px;
+              padding: 4px 10px;
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: flex-end;
+                gap: 2.5px;
+                height: 14px;
+              "
+            >
+              <div
+                style="
+                  width: 2.5px;
+                  background: #00f5d4;
+                  border-radius: 2px;
+                  animation: soundWave 1.1s infinite ease-in-out;
+                "
+              ></div>
+              <div
+                style="
+                  width: 2.5px;
+                  background: #00f5d4;
+                  border-radius: 2px;
+                  animation: soundWave 0.8s infinite ease-in-out 0.2s;
+                "
+              ></div>
+              <div
+                style="
+                  width: 2.5px;
+                  background: #00f5d4;
+                  border-radius: 2px;
+                  animation: soundWave 1.4s infinite ease-in-out 0.4s;
+                "
+              ></div>
+              <div
+                style="
+                  width: 2.5px;
+                  background: #ffc107;
+                  border-radius: 2px;
+                  animation: soundWave 0.9s infinite ease-in-out 0.1s;
+                "
+              ></div>
+            </div>
+            <span style="font-size: 10.5px; font-weight: 600; color: #cbd5e1"
+              >Wuthering Waves · Live Mod Injector</span
+            >
+          </div>
+
+          <!-- Quick Shizuku Status Pill -->
+          <div
+            style="
+              background: rgba(16, 185, 129, 0.18);
+              border: 1px solid rgba(16, 185, 129, 0.4);
+              padding: 4px 10px;
+              border-radius: 20px;
+              display: flex;
+              align-items: center;
+              gap: 5px;
+            "
+          >
+            <div
+              style="
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #10b981;
+                box-shadow: 0 0 8px #10b981;
+              "
+            ></div>
+            <span style="font-size: 10px; font-weight: 700; color: #10b981"
+              >UID 2000 OK</span
+            >
+          </div>
+        </div>
+
+        <!-- Spacer to let the beautiful character background breathe -->
+        <div
+          style="flex: 1; z-index: 10; min-height: {{ spacerHeight }};"
+        ></div>
+
+        <!-- Interactive Glassmorphic Bottom Sheet Layer -->
+        <div
+          class="hide-scrollbar"
+          style="z-index: 25; max-height: {{ sheetMaxHeight }}; overflow-y: auto; background: rgba(14, 18, 28, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-top: 1px solid rgba(255, 255, 255, 0.14); border-radius: 28px 28px 0 0; padding: 16px 16px 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.6); transition: max-height 0.3s ease-in-out;"
+        >
+          <!-- Drag / Swipe Handle Bar -->
+          <div
+            style="
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              margin-bottom: 2px;
+            "
+          >
+            <div
+              style="
+                width: 36px;
+                height: 4px;
+                border-radius: 2px;
+                background: rgba(255, 255, 255, 0.3);
+              "
+            ></div>
+          </div>
+
+          <!-- Primary 1-Click Action Button (Motion Shimmer & Pulse) -->
+          <button
+            type="button"
+            onClick="{{ onInstallClick }}"
+            class="shimmer-btn glow-interactive"
+            style="
+              width: 100%;
+              height: 52px;
+              border-radius: 15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              color: #071018;
+              font-weight: 800;
+              font-size: 15px;
+              letter-spacing: 0.3px;
+              cursor: pointer;
+              border: none;
+            "
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span>CÀI ĐẶT / CẬP NHẬT VIỆT HÓA</span>
+          </button>
+
+          <!-- Quick Launch Game Button -->
+          <button
+            type="button"
+            onClick="{{ onLaunchGameClick }}"
+            style="
+              width: 100%;
+              height: 42px;
+              border-radius: 12px;
+              background: rgba(30, 35, 51, 0.9);
+              border: 1px solid rgba(0, 245, 212, 0.4);
+              color: #00f5d4;
+              font-weight: 700;
+              font-size: 13px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+              cursor: pointer;
+            "
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            <span>KHỞI ĐỘNG WUTHERING WAVES</span>
+          </button>
+
+          <!-- Detailed Config Options (Accordion) -->
+          <div
+            style="
+              background: rgba(255, 255, 255, 0.03);
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              border-radius: 14px;
+              padding: 12px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+              "
+            >
+              <span
+                style="
+                  font-size: 11px;
+                  font-weight: 700;
+                  color: #00f5d4;
+                  text-transform: uppercase;
+                "
+                >1. Phong cách tên nhân vật</span
+              >
+              <span style="font-size: 10px; color: #94a3b8">Chạm để đổi</span>
+            </div>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px;
+              "
+            >
+              <!-- Option English -->
+              <button
+                type="button"
+                onClick="{{ pickEnStyle }}"
+                style="background: {{ enBg }}; border: 1px solid {{ enBorder }}; border-radius: 10px; padding: 8px 10px; text-align: left; cursor: pointer; color: #FFFFFF;"
+              >
+                <div style="font-size: 12px; font-weight: 700">Tên Quốc Tế</div>
+                <div style="font-size: 10px; color: #94a3b8">
+                  Jinhsi, Changli...
+                </div>
+              </button>
+
+              <!-- Option Han Viet -->
+              <button
+                type="button"
+                onClick="{{ pickHanStyle }}"
+                style="background: {{ hanBg }}; border: 1px solid {{ hanBorder }}; border-radius: 10px; padding: 8px 10px; text-align: left; cursor: pointer; color: #FFFFFF;"
+              >
+                <div style="font-size: 12px; font-weight: 700">
+                  Tên Hán Việt
+                </div>
+                <div style="font-size: 10px; color: #94a3b8">
+                  Kim Tịch, Trường Ly...
+                </div>
+              </button>
+            </div>
+
+            <!-- Dialogue Preview -->
+            <div
+              style="
+                background: rgba(0, 0, 0, 0.3);
+                border-radius: 8px;
+                padding: 8px 10px;
+                font-size: 11px;
+                font-style: italic;
+                color: #cbd5e1;
+                line-height: 1.4;
+              "
+            >
+              "{{ dialogueText }}"
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 4px;
+              "
+            >
+              <span
+                style="
+                  font-size: 11px;
+                  font-weight: 700;
+                  color: #ffc107;
+                  text-transform: uppercase;
+                "
+                >2. Phông chữ tiếng Việt</span
+              >
+              <span style="font-size: 10px; color: #94a3b8"
+                >Lexend (Khuyên dùng)</span
+              >
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px;
+              "
+            >
+              <button
+                type="button"
+                onClick="{{ pickLexend }}"
+                style="background: {{ lexendBg }}; border: 1px solid {{ lexendBorder }}; border-radius: 10px; padding: 8px 10px; text-align: left; cursor: pointer; color: #FFFFFF;"
+              >
+                <div style="font-size: 12px; font-weight: 700">Lexend Deca</div>
+                <div style="font-size: 10px; color: #94a3b8">
+                  Nét tròn dễ đọc
+                </div>
+              </button>
+              <button
+                type="button"
+                onClick="{{ pickSegoe }}"
+                style="background: {{ segoeBg }}; border: 1px solid {{ segoeBorder }}; border-radius: 10px; padding: 8px 10px; text-align: left; cursor: pointer; color: #FFFFFF;"
+              >
+                <div style="font-size: 12px; font-weight: 700">
+                  Segoe UI Mod
+                </div>
+                <div style="font-size: 10px; color: #94a3b8">
+                  Thanh mảnh hiện đại
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- System Status & Shizuku Quick Cards -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              gap: 8px;
+            "
+          >
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 12px;
+                padding: 9px 12px;
+              "
+            >
+              <div
+                style="
+                  font-size: 10px;
+                  font-weight: 700;
+                  color: #94a3b8;
+                  text-transform: uppercase;
+                "
+              >
+                Shizuku Binder
+              </div>
+              <div
+                style="
+                  font-size: 11.5px;
+                  font-weight: 700;
+                  color: #10b981;
+                  margin-top: 2px;
+                "
+              >
+                ✓ Đã cấp quyền
+              </div>
+            </div>
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 12px;
+                padding: 9px 12px;
+              "
+            >
+              <div
+                style="
+                  font-size: 10px;
+                  font-weight: 700;
+                  color: #94a3b8;
+                  text-transform: uppercase;
+                "
+              >
+                Mục ~WuWaMods
+              </div>
+              <div
+                style="
+                  font-size: 11.5px;
+                  font-weight: 700;
+                  color: #00f5d4;
+                  margin-top: 2px;
+                "
+              >
+                ✓ Sẵn sàng nạp
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Shizuku Terminal Log Drawer -->
+          <div
+            style="
+              background: #06080d;
+              border: 1px solid rgba(255, 255, 255, 0.07);
+              border-radius: 12px;
+              padding: 10px 12px;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 4px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;JetBrains Mono&quot;, monospace;
+                  font-size: 10px;
+                  font-weight: 700;
+                  color: #00f5d4;
+                "
+              >
+                SHIZUKU CONSOLE
+              </span>
+              <span
+                style="
+                  font-family: &quot;JetBrains Mono&quot;, monospace;
+                  font-size: 9px;
+                  color: #64748b;
+                "
+              >
+                priority _99_P
+              </span>
+            </div>
+            <div
+              style="
+                font-family: &quot;JetBrains Mono&quot;, monospace;
+                font-size: 10.5px;
+                color: #94a3b8;
+                line-height: 1.4;
+              "
+            >
+              <div><span style="color: #10b981">[OK]</span> {{ logLine1 }}</div>
+              <div>
+                <span style="color: #ffc107">[STATUS]</span> {{ logLine2 }}
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Safe Rollback Button -->
+          <button
+            type="button"
+            onClick="{{ onUninstallPatch }}"
+            style="
+              background: rgba(239, 68, 68, 0.08);
+              border: 1px solid rgba(239, 68, 68, 0.25);
+              color: #ef4444;
+              font-weight: 700;
+              font-size: 12.5px;
+              height: 38px;
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 6px;
+              cursor: pointer;
+            "
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="3 6 5 6 21 6" />
+              <path
+                d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+              />
+            </svg>
+            <span>Gỡ Bỏ Việt Hóa (Về Bản Gốc)</span>
+          </button>
+        </div>
+
+        <!-- Bottom Navigation Bar (2 Tabs) -->
+        <div
+          style="
+            height: 64px;
+            width: 100%;
+            background: rgba(11, 14, 21, 0.96);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 24px;
+            z-index: 30;
+          "
+        >
+          <!-- Tab 1: Trang Chủ Việt Hóa (Active) -->
+          <a
+            href="Main.dc.html"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              min-width: 120px;
+              height: 48px;
+              color: #00f5d4;
+              gap: 4px;
+            "
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <span style="font-size: 11px; font-weight: 700">1. Việt Hóa</span>
+          </a>
+
+          <!-- Tab 2: Thông Báo & Hướng Dẫn (Link to Info.dc.html) -->
+          <a
+            href="Info.dc.html"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              min-width: 120px;
+              height: 48px;
+              color: #64748b;
+              gap: 4px;
+            "
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="16" x2="12" y2="12" />
+              <line x1="12" y1="8" x2="12.01" y2="8" />
+            </svg>
+            <span style="font-size: 11px; font-weight: 600"
+              >2. Thông Tin & Hướng Dẫn</span
+            >
+          </a>
+        </div>
+      </div>
+    </x-dc>
+
+    <script
+      type="text/x-dc"
+      data-dc-script
+      data-props='{"accent":{"editor":"color","default":"#00F5D4"},"$preview":{"width":390,"height":844}}'
+    >
+      class Component extends DCLogic {
+        constructor() {
+          super();
+          this.state = {
+            isCleanView: false,
+            style: 'en',
+            font: 'lexend',
+            logLine1: 'Shizuku active on port 5555 (UID 2000)',
+            logLine2: 'Hệ thống sẵn sàng nạp gói Việt Hóa mới nhất.'
+          };
+        }
+
+        renderVals() {
+          const isClean = this.state.isCleanView;
+          const isEn = this.state.style === 'en';
+          const isLexend = this.state.font === 'lexend';
+
+          return {
+            modeButtonText: isClean ? 'Mở Bảng Điều Khiển' : 'Xem Toàn Cảnh',
+            spacerHeight: isClean ? '380px' : '30px',
+            sheetMaxHeight: isClean ? '140px' : '520px',
+
+            enBg: isEn ? 'rgba(0, 245, 212, 0.15)' : 'rgba(255, 255, 255, 0.02)',
+            enBorder: isEn ? '#00F5D4' : 'rgba(255, 255, 255, 0.1)',
+            hanBg: !isEn ? 'rgba(255, 193, 7, 0.15)' : 'rgba(255, 255, 255, 0.02)',
+            hanBorder: !isEn ? '#FFC107' : 'rgba(255, 255, 255, 0.1)',
+
+            lexendBg: isLexend ? 'rgba(0, 245, 212, 0.15)' : 'rgba(255, 255, 255, 0.02)',
+            lexendBorder: isLexend ? '#00F5D4' : 'rgba(255, 255, 255, 0.1)',
+            segoeBg: !isLexend ? 'rgba(255, 193, 7, 0.15)' : 'rgba(255, 255, 255, 0.02)',
+            segoeBorder: !isLexend ? '#FFC107' : 'rgba(255, 255, 255, 0.1)',
+
+            dialogueText: isEn
+              ? 'Changli: "Thế giới này tựa như một bàn cờ, mỗi bước đi đều định đoạt cục diện mai sau."'
+              : 'Trường Ly: "Thiên địa tựa như bàn cờ, mỗi một nước cờ đều định đoạt thế cục mai sau."',
+
+            logLine1: this.state.logLine1,
+            logLine2: this.state.logLine2,
+
+            toggleDisplayMode: () => this.setState({ isCleanView: !this.state.isCleanView }),
+            pickEnStyle: () => this.setState({ style: 'en' }),
+            pickHanStyle: () => this.setState({ style: 'han' }),
+            pickLexend: () => this.setState({ font: 'lexend' }),
+            pickSegoe: () => this.setState({ font: 'segoe' }),
+            onInstallClick: () => {
+              this.setState({
+                logLine1: 'Đang tải bản dịch mới nhất từ GitHub...',
+                logLine2: 'Nạp file _99_P_Viethoa.pak vào ~WuWaMods thành công!'
+              });
+              alert('Đã thực hiện nạp bản dịch Tiếng Việt!');
+            },
+            onLaunchGameClick: () => alert('Đang mở Wuthering Waves...'),
+            onUninstallPatch: () => alert('Đã gỡ bỏ bản Việt Hóa khỏi ~WuWaMods.')
+          };
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-04T21:55:00Z"
+  },
+  "title": "WuWa Việt Hóa Mobile UI",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "Trang 1: Trang Chủ Việt Hóa",
+      "is_interactive": true
+    },
+    "Info.dc.html": {
+      "x": 470,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "Trang 2: Thông Báo & Hướng Dẫn",
+      "is_interactive": true
+    }
+  },
+  "order": ["Main.dc.html", "Info.dc.html"],
+  "notes": {
+    "title1": {
+      "x": 0,
+      "y": -240,
+      "text": "WuWa Việt Hóa Mobile - 2 Trang Giao Diện Trực Quan",
+      "kind": "title1",
+      "maxW": 1000
+    }
+  },
+  "designSystems": []
+}

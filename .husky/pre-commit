@@ -1,0 +1,2 @@
+npx lint-staged
+powershell -ExecutionPolicy Bypass -File scripts/test.ps1

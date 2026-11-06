@@ -1,0 +1,14 @@
+{
+  "name": "wuwa-viethoa",
+  "version": "3.7.2",
+  "private": true,
+  "description": "WuWa Viet Hoa Mobile",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.10"
+  }
+}
